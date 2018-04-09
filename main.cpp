@@ -27,9 +27,6 @@ int precedence(char symbol) {
       case '/':
          return 3;
          break;
-      case '^':
-         return 4;
-         break;
       case '(':
       case ')':
       case '#':
