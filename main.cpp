@@ -41,19 +41,10 @@ int precedence(char symbol) {
 //check whether the symbol is operator?
 int isOperator(char symbol) {
 
-   switch(symbol) {
-      case '+':
-      case '-':
-      case '*':
-      case '/':
-      case '^':
-      case '(':
-      case ')':
-         return 1;
-      break;
-         default:
-         return 0;
+   if(symbol == '+' || symbol == '-' || symbol == '*' || symbol == '/' || symbol == '(' || symbol == ')'){
+    return 1;
    }
+   return 0;
 }
 
 //converts infix expression to postfix
@@ -153,7 +144,7 @@ int evaluate(char *postfix){
 
 
 int main() {
-   char infix[25] = "9*6+5+1",postfix[25];
+   char infix[25] = "9*6+(5+1)",postfix[25];
    convert(infix,postfix);
 
    printf("Infix expression is: %s\n" , infix);
